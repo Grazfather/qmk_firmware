@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCTL(KC_TAB),   LCTL(KC_Q),     LCTL(KC_W),     LCTL(KC_F),     LCTL(KC_P),     LCTL(KC_V),     KC_TRANSPARENT,                                 KC_TRANSPARENT, LCTL(KC_J),     LCTL(KC_L),     LCTL(KC_U),     LCTL(KC_Y),     LCTL(KC_SCOLON),LCTL(KC_BSLASH),
     KC_TRANSPARENT, LCTL(KC_A),     LCTL(KC_R),     LCTL(KC_S),     LCTL(KC_T),     LCTL(KC_G),     KC_TRANSPARENT,                                                                 LCTL(KC_EQUAL), LCTL(KC_M),     LCTL(KC_N),     LCTL(KC_E),     LCTL(KC_I),     LCTL(KC_O),     LCTL(KC_QUOTE),
     LCTL(KC_LSHIFT),LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_D),     LCTL(KC_B),                                     LCTL(KC_K),     LCTL(KC_H),     LCTL(KC_COMMA), LCTL(KC_DOT),   LCTL(KC_SLASH), LCTL(KC_RSHIFT),
-    KC_TRANSPARENT, LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_LALT),  LCTL(KC_LGUI),  KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, LCTL(KC_LBRACKET),LCTL(KC_RBRACKET),LCTL(KC_UP),    LCTL(KC_DOWN),  KC_TRANSPARENT,
+    KC_TRANSPARENT, LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_LALT),  LCTL(KC_LGUI),  KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, LCTL(KC_LEFT),  LCTL(KC_DOWN),  LCTL(KC_UP),    LCTL(KC_RIGHT), KC_TRANSPARENT,
     LALT(LCTL(KC_LGUI)),KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [5] = LAYOUT_moonlander(
