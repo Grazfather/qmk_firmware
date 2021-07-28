@@ -8,8 +8,12 @@
 
 #define RETRO_TAPPING
 
+// Register a mod + key as soon as the key is released instead of when the mod
+// is released.
 #define PERMISSIVE_HOLD
 
+// Don't register a tap then hold on one key as a hold of the tapped key. Let
+// the hold work as a mod.
 #define TAPPING_FORCE_HOLD
 
 #define HOLD_ON_OTHER_KEY_PRESS
