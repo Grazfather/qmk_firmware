@@ -24,62 +24,63 @@ enum custom_keycodes {
   HSV_172_255_255,
 };
 
-
+#define _______ KC_TRNS
+#define XXXXXXX KC_NO
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Base layer
   [0] = LAYOUT_moonlander(
     KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_6,                           KC_5,           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
-    KC_TAB,         KC_Q,           KC_W,           KC_F,           KC_P,           KC_V,           KC_NO,                          KC_NO,          KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_BSLS,
-    LT(4,KC_ESCAPE),KC_A,           KC_R,           KC_S,           KC_T,           KC_G,           KC_NO,                          KC_NO,          KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_QUOTE,
+    KC_TAB,         KC_Q,           KC_W,           KC_F,           KC_P,           KC_V,           XXXXXXX,                        XXXXXXX,        KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_BSLS,
+    LT(4,KC_ESCAPE),KC_A,           KC_R,           KC_S,           KC_T,           KC_G,           XXXXXXX,                        XXXXXXX,        KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_QUOTE,
     KC_LSFT,        KC_Z,           KC_X,           KC_C,           KC_D,           KC_B,                                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSFT,
-    MO(3),          KC_LEFT,        KC_RIGHT,       KC_LALT,        KC_LGUI,                        KC_NO,                          KC_NO,                          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       MO(3),
+    MO(3),          KC_LEFT,        KC_RIGHT,       KC_LALT,        KC_LGUI,                        XXXXXXX,                        XXXXXXX,                        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       MO(3),
                                                                     KC_SPACE,       KC_LALT,        KC_ESCAPE,                      MO(1),          KC_BSPC,        LT(1,KC_ENTER)
   ),
   // Symbol layer
   [1] = LAYOUT_moonlander(
-    KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_TRNS,                        KC_TRNS,        KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
-    KC_TRNS,        KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_LBRC,        KC_RBRC,        KC_TRNS,        KC_TRNS,        KC_F12,
-    KC_TRNS,        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_RPRN,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_LPRN,        KC_RPRN,        KC_TRNS,        KC_EQUAL,       KC_TRNS,
-    KC_TRNS,        KC_LCBR,        KC_RCBR,        KC_LBRC,        KC_RBRC,        KC_TRNS,                                                        KC_TRNS,        KC_LCBR,        KC_RCBR,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-    KC_TRNS,        KC_TRNS,        HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,                RGB_MOD,                        RGB_TOG,                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,
-                                                                    RGB_VAD,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        RGB_HUD,        KC_TRNS
+    KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          XXXXXXX,                        XXXXXXX,        KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
+    _______,        KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,        XXXXXXX,                        XXXXXXX,        XXXXXXX,        KC_LBRC,        KC_RBRC,        XXXXXXX,        XXXXXXX,        KC_F12,
+    _______,        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_RPRN,        XXXXXXX,                        XXXXXXX,        XXXXXXX,        KC_LPRN,        KC_RPRN,        XXXXXXX,        KC_EQUAL,       _______,
+    _______,        KC_LCBR,        KC_RCBR,        KC_LBRC,        KC_RBRC,        XXXXXXX,                                                        XXXXXXX,        KC_LCBR,        KC_RCBR,        XXXXXXX,        XXXXXXX,        _______,
+    _______,        _______,        HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,                RGB_MOD,                        RGB_TOG,                        _______,        _______,        _______,        _______,        _______,
+                                                                    RGB_VAD,        _______,        _______,                        _______,        RGB_HUD,        _______
   ),
   // Numpad layer
   [2] = LAYOUT_moonlander(
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    KC_TRNS,
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_7,           KC_8,           KC_9,           KC_KP_PLUS,     KC_TRNS,
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     KC_TRNS,
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                                                        KC_TRNS,        KC_1,           KC_2,           KC_3,           KC_KP_EQUAL,    KC_TRNS,
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,                        KC_TRNS,                        KC_0,           KC_0,           KC_KP_DOT,      KC_KP_EQUAL,    TO(0),
-                                                                    KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS
+    _______,        _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        _______,        KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    _______,
+    _______,        _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        KC_7,           KC_8,           KC_9,           KC_KP_PLUS,     _______,
+    _______,        _______,        _______,        _______,        _______,        _______,        _______,                        _______,        _______,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     _______,
+    _______,        _______,        _______,        _______,        _______,        _______,                                                        _______,        KC_1,           KC_2,           KC_3,           KC_KP_EQUAL,    _______,
+    _______,        _______,        _______,        _______,        _______,                        _______,                        _______,                        KC_0,           KC_0,           KC_KP_DOT,      KC_KP_EQUAL,    TO(0),
+                                                                    _______,        _______,        _______,                        _______,        _______,        _______
   ),
   // Media layer
   [3] = LAYOUT_moonlander(
-    AU_TOGG,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        RESET,
-    MU_TOGG,        KC_TRNS,        KC_TRNS,        KC_MS_UP,       KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        WEBUSB_PAIR,
-    MU_NEXT,        KC_TRNS,        KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_MEDIA_PLAY_PAUSE,
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                                                        KC_TRNS,        KC_TRNS,        KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,KC_TRNS,TO(5),
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,                        KC_TRNS,                        KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_AUDIO_MUTE,TO(2),          KC_TRNS,
-                                                                    KC_MS_BTN1,     KC_MS_BTN2,     KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_WWW_BACK
+    AU_TOGG,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        RESET,
+    MU_TOGG,        XXXXXXX,        XXXXXXX,        KC_MS_UP,       XXXXXXX,        XXXXXXX,        XXXXXXX,                        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        WEBUSB_PAIR,
+    MU_NEXT,        XXXXXXX,        KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    XXXXXXX,        XXXXXXX,                        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        KC_MEDIA_PLAY_PAUSE,
+    XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                                                        XXXXXXX,        XXXXXXX,        KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,XXXXXXX,TO(5),
+    XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                        XXXXXXX,                        XXXXXXX,                        KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_AUDIO_MUTE,TO(2),          XXXXXXX,
+                                                                    KC_MS_BTN1,     KC_MS_BTN2,     XXXXXXX,                        XXXXXXX,        XXXXXXX,        KC_WWW_BACK
   ),
   // Ctrl layer
   [4] = LAYOUT_moonlander(
-    LCTL(KC_GRAVE), LCTL(KC_1),     LCTL(KC_2),     LCTL(KC_3),     LCTL(KC_4),     LCTL(KC_5),     KC_TRNS,                        KC_TRNS,        LCTL(KC_6),     LCTL(KC_7),     LCTL(KC_8),     LCTL(KC_9),     LCTL(KC_0),     LCTL(KC_MINUS),
-    LCTL(KC_TAB),   LCTL(KC_Q),     LCTL(KC_W),     LCTL(KC_F),     LCTL(KC_P),     LCTL(KC_V),     KC_TRNS,                        KC_TRNS,        LCTL(KC_J),     LCTL(KC_L),     LCTL(KC_U),     LCTL(KC_Y),     LCTL(KC_SCLN),  LCTL(KC_BSLS),
-    KC_TRNS,        LCTL(KC_A),     LCTL(KC_R),     LCTL(KC_S),     LCTL(KC_T),     LCTL(KC_G),     KC_TRNS,                        KC_TRNS,        LCTL(KC_M),     LCTL(KC_N),     LCTL(KC_E),     LCTL(KC_I),     LCTL(KC_O),     LCTL(KC_QUOTE),
+    LCTL(KC_GRAVE), LCTL(KC_1),     LCTL(KC_2),     LCTL(KC_3),     LCTL(KC_4),     LCTL(KC_5),     _______,                        _______,        LCTL(KC_6),     LCTL(KC_7),     LCTL(KC_8),     LCTL(KC_9),     LCTL(KC_0),     LCTL(KC_MINUS),
+    LCTL(KC_TAB),   LCTL(KC_Q),     LCTL(KC_W),     LCTL(KC_F),     LCTL(KC_P),     LCTL(KC_V),     _______,                        _______,        LCTL(KC_J),     LCTL(KC_L),     LCTL(KC_U),     LCTL(KC_Y),     LCTL(KC_SCLN),  LCTL(KC_BSLS),
+    _______,        LCTL(KC_A),     LCTL(KC_R),     LCTL(KC_S),     LCTL(KC_T),     LCTL(KC_G),     _______,                        _______,        LCTL(KC_M),     LCTL(KC_N),     LCTL(KC_E),     LCTL(KC_I),     LCTL(KC_O),     LCTL(KC_QUOTE),
     LCTL(KC_LSFT),  LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_D),     LCTL(KC_B),                                                     LCTL(KC_K),     LCTL(KC_H),     LCTL(KC_COMMA), LCTL(KC_DOT),   LCTL(KC_SLASH), LCTL(KC_RSFT),
-    KC_TRNS,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_LALT),  LCTL(KC_LGUI),                  KC_TRNS,                        KC_TRNS,                        LCTL(KC_LEFT),  LCTL(KC_DOWN),  LCTL(KC_UP),    LCTL(KC_RIGHT), KC_TRNS,
-                                                                    LALT(LCTL(KC_LGUI)),KC_TRNS,    KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS
+    _______,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_LALT),  LCTL(KC_LGUI),                  _______,                        _______,                        LCTL(KC_LEFT),  LCTL(KC_DOWN),  LCTL(KC_UP),    LCTL(KC_RIGHT), _______,
+                                                                    LALT(LCTL(KC_LGUI)),_______,    _______,                        _______,        _______,        _______
   ),
   // Qwerty/gaming layer
   [5] = LAYOUT_moonlander(
     KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                          KC_NO,          KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
     KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_NO,                          KC_NO,          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,
     KC_LCTL,        KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_NO,                          KC_NO,          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOTE,
-    KC_TRNS,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSFT,
-    KC_TRNS,        KC_TRNS,        KC_TRNS,        KC_LALT,        KC_LGUI,                        KC_NO,                          KC_NO,                          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       TO(0),
-                                                                    KC_TRNS,        KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,        KC_TRNS
+    _______,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSFT,
+    _______,        _______,        _______,        KC_LALT,        KC_LGUI,                        KC_NO,                          KC_NO,                          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       TO(0),
+                                                                    _______,        _______,        _______,                        _______,        _______,        _______
   ),
 };
 
