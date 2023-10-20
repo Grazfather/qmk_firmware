@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,         KC_Q,           KC_W,           KC_F,           KC_P,           KC_V,           XXXXXXX,                        XXXXXXX,        KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_BSLS,
     LT(4,KC_ESCAPE),KC_A,           KC_R,           KC_S,           KC_T,           KC_G,           XXXXXXX,                        XXXXXXX,        KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_QUOTE,
     KC_LSFT,        KC_Z,           KC_X,           KC_C,           KC_D,           KC_B,                                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSFT,
-    MO(3),          KC_LEFT,        KC_RIGHT,       KC_LALT,        KC_LGUI,                        XXXXXXX,                        XXXXXXX,                        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       MO(3),
-                                                                    KC_SPACE,       KC_LALT,        KC_ESCAPE,                      MO(1),          KC_BSPC,        LT(1,KC_ENTER)
+    XXXXXXX,        XXXXXXX,        XXXXXXX,        KC_LALT,        KC_LGUI,                        XXXXXXX,                        XXXXXXX,                        KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       MO(3),
+                                                                    KC_SPACE,       XXXXXXX,        KC_ESCAPE,                      XXXXXXX,        KC_BSPC,        LT(1,KC_ENTER)
   ),
   // Symbol layer
   [1] = LAYOUT_moonlander(
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     MU_NEXT,        XXXXXXX,        KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    XXXXXXX,        XXXXXXX,                        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        KC_MEDIA_PLAY_PAUSE,
     XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                                                        XXXXXXX,        XXXXXXX,        KC_MEDIA_PREV_TRACK,KC_MEDIA_NEXT_TRACK,XXXXXXX,TO(5),
     XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                        XXXXXXX,                        XXXXXXX,                        KC_AUDIO_VOL_DOWN,KC_AUDIO_VOL_UP,KC_AUDIO_MUTE,TO(2),          XXXXXXX,
-                                                                    KC_MS_BTN1,     KC_MS_BTN2,     XXXXXXX,                        XXXXXXX,        XXXXXXX,        KC_WWW_BACK
+                                                                    KC_MS_BTN1,     KC_MS_BTN2,     XXXXXXX,                        XXXXXXX,        XXXXXXX,        XXXXXXX
   ),
   // Ctrl layer
   [4] = LAYOUT_moonlander(
@@ -70,17 +70,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCTL(KC_TAB),   LCTL(KC_Q),     LCTL(KC_W),     LCTL(KC_F),     LCTL(KC_P),     LCTL(KC_V),     _______,                        _______,        LCTL(KC_J),     LCTL(KC_L),     LCTL(KC_U),     LCTL(KC_Y),     LCTL(KC_SCLN),  LCTL(KC_BSLS),
     _______,        LCTL(KC_A),     LCTL(KC_R),     LCTL(KC_S),     LCTL(KC_T),     LCTL(KC_G),     _______,                        _______,        LCTL(KC_M),     LCTL(KC_N),     LCTL(KC_E),     LCTL(KC_I),     LCTL(KC_O),     LCTL(KC_QUOTE),
     LCTL(KC_LSFT),  LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_D),     LCTL(KC_B),                                                     LCTL(KC_K),     LCTL(KC_H),     LCTL(KC_COMMA), LCTL(KC_DOT),   LCTL(KC_SLASH), LCTL(KC_RSFT),
-    _______,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_LALT),  LCTL(KC_LGUI),                  _______,                        _______,                        LCTL(KC_LEFT),  LCTL(KC_DOWN),  LCTL(KC_UP),    LCTL(KC_RIGHT), _______,
+    _______,        XXXXXXX,        XXXXXXX,        LCTL(KC_LALT),  LCTL(KC_LGUI),                  _______,                        _______,                        LCTL(KC_LEFT),  LCTL(KC_DOWN),  LCTL(KC_UP),    LCTL(KC_RIGHT), _______,
                                                                     LALT(LCTL(KC_LGUI)),_______,    _______,                        _______,        _______,        _______
   ),
   // Qwerty/gaming layer
   [5] = LAYOUT_moonlander(
-    KC_ESCAPE,      KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                          KC_NO,          KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
-    KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_NO,                          KC_NO,          KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,
-    KC_LCTL,        KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_NO,                          KC_NO,          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCLN,        KC_QUOTE,
-    _______,        KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                                           KC_N,           KC_M,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_RSFT,
-    _______,        _______,        _______,        KC_LALT,        KC_LGUI,                        KC_NO,                          KC_NO,                          KC_LEFT,        KC_DOWN,        KC_UP,          KC_RIGHT,       TO(0),
-                                                                    _______,        _______,        _______,                        _______,        _______,        _______
+    KC_ESC,      KC_1,        KC_2,        KC_3,        KC_4,        KC_5,    KC_NO,                       KC_NO,     KC_6,        KC_7,        KC_8,        KC_9,        KC_0,         KC_MINUS,
+    KC_TAB,      KC_Q,        KC_W,        KC_E,        KC_R,        KC_T,    KC_NO,                       KC_NO,     KC_Y,        KC_U,        KC_I,        KC_O,        KC_P,         KC_BSLS,
+    KC_LCTL,     KC_A,        KC_S,        KC_D,        KC_F,        KC_G,    KC_NO,                       KC_NO,     KC_H,        KC_J,        KC_K,        KC_L,        KC_SCLN,      KC_QUOTE,
+    KC_LSFT,     KC_Z,        KC_X,        KC_C,        KC_V,        KC_B,                                            KC_N,        KC_M,        KC_COMMA,    KC_DOT,      KC_SLASH,     KC_RSFT,
+    _______,     _______,     _______,     KC_LALT,     KC_LGUI,              KC_NO,                       KC_NO,                  KC_LEFT,     KC_DOWN,     KC_UP,       KC_RIGHT,     TO(0),
+                                                        _______,  _______,  _______,                       _______,   _______,     _______
   ),
 };
 
