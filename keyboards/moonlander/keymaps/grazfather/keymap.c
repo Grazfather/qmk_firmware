@@ -40,10 +40,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Symbol layer
   [1] = LAYOUT_moonlander(
     KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          XXXXXXX,                        XXXXXXX,        KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
-    _______,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           XXXXXXX,                        XXXXXXX,        XXXXXXX,        KC_LBRC,        KC_RBRC,        XXXXXXX,        XXXXXXX,        KC_F12,
-    _______,        KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           XXXXXXX,                        XXXXXXX,        XXXXXXX,        KC_LPRN,        KC_RPRN,        XXXXXXX,        KC_EQUAL,       _______,
-    _______,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                                                        XXXXXXX,        KC_LCBR,        KC_RCBR,        XXXXXXX,        XXXXXXX,        _______,
-    _______,        _______,        HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,                RGB_MOD,                        RGB_TOG,                        RGB_VAD,        RGB_VAI,        XXXXXXX,        XXXXXXX,        _______,
+    _______,        KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,        XXXXXXX,                        XXXXXXX,        KC_CIRC,        KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_RPRN,        KC_F12,
+    _______,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           XXXXXXX,                        XXXXXXX,        KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           _______,
+    _______,        KC_EQL,         XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                                                        XXXXXXX,        KC_LCBR,        KC_RCBR,        KC_LBRC,        KC_RBRC,        _______,
+    _______,        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,                        XXXXXXX,                        XXXXXXX,                        XXXXXXX,        XXXXXXX,        XXXXXXX,        XXXXXXX,        _______,
                                                                     _______,        _______,        _______,                        _______,        _______,        _______
   ),
   // Numpad layer
