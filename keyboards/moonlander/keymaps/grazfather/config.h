@@ -16,6 +16,8 @@
 // the hold work as a mod.
 #define TAPPING_FORCE_HOLD
 
+// When I quickly hit a layer toggle with a tap (LT), use the hold function if
+// I hit another key, even if I don't hold it for TAPPING_TERM
 #define HOLD_ON_OTHER_KEY_PRESS
 
 #undef IGNORE_MOD_TAP_INTERRUPT
