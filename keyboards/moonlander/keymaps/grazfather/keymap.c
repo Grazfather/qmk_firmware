@@ -24,9 +24,6 @@ enum custom_keycodes {
   HSV_172_255_255,
 };
 
-#define _______ KC_TRNS
-#define XXXXXXX KC_NO
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Base layer
   [0] = LAYOUT_moonlander(
